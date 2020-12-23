@@ -1,0 +1,16 @@
+name: Hub
+version: ${project.version}
+main: fr.twah2em.hub.Hub
+authors: [ Twah2em ]
+description: Plugin de hub
+commands:
+  setrank:
+    description: Définir le rank d'un joueur.
+  coins:
+    description: Afficher votre argent
+  addcoins:
+    description: Ajouter de l'argent à un joueur
+  removecoins:
+    description: Enlever de l'argent à un joueur
+  setcoins:
+    description: Définir l'argent d'un joueur
