@@ -1,0 +1,10 @@
+Problème de version du protocole SSL semble-t-il d'après error.txt :
+ 
+  Caused by: javax.net.ssl.SSLException: Received fatal alert: protocol_version
+
+Il est possible que le serveur utilisé (45.140.165.227 d'après Hub.java) utilise le protocole TLS v1.0 et java 1.8 utilise par défaut TLS v2.0.
+Essaye en ajoutant dans Hub.java
+  
+  System.setProperty("https.protocols", "TLSv1");
+
+avant de lancer la connexion
